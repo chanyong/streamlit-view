@@ -16,7 +16,7 @@ curs = conn.cursor()
 # Perform query.
 # Uses st.cache_data to only rerun when the query changes or after 10 min.
 # @st.cache_data(ttl=600)
-sql = "SELECT * from ticket_price_daily;"
+sql = "SELECT  price_date ,  ROUND(ticket_rate*100,2)  from ticket_price_daily;"
 curs.execute(sql)
 result = curs.fetchall()
 result_df = pd.DataFrame(result)
