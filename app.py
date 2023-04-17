@@ -69,6 +69,7 @@ for idx in range(N):
         y=alt.Y('할인율:Q', scale=alt.Scale(domain=(3, 5))),
         color=alt.Color('티켓종류', legend=alt.Legend(
         orient='none',
+       legendX=130, legendY=-600,     
         direction='horizontal',
         titleAnchor='middle'))
     )
