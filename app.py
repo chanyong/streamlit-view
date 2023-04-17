@@ -66,11 +66,10 @@ for idx in range(N):
 
     chart = alt.Chart(result_df).mark_line().encode(
         x=alt.X('일자:N'),
-        y=alt.Y('할인율:Q', scale=alt.Scale(domain=(3, 5))),
+        y=alt.Y('할인율:Q', scale=alt.Scale(domain=(3, 5.5))),
         color=alt.Color('티켓종류', legend=alt.Legend(
             orient='none',
-            legendX=130, legendY=-40,
-            direction='horizontal',
+            legendX=520, legendY=0,
             titleAnchor='middle'))
     )
     st.altair_chart(chart, use_container_width=True)
