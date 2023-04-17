@@ -69,7 +69,8 @@ for idx in range(N):
         y=alt.Y('할인율:Q', scale=alt.Scale(domain=(3, 5.5))),
         color=alt.Color('티켓종류', legend=alt.Legend(
             orient='none',
-            legendX=520, legendY=0,
+            direction='horizontal',
+            legendX=50, legendY=0,
             titleAnchor='middle'))
     )
     st.altair_chart(chart, use_container_width=True)
