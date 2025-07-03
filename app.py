@@ -8,14 +8,9 @@ import requests
 st.title('상품권 시세 차트')
 st.subheader(' ')
 
-ip = requests.get('https://api.ipify.org').text
-st.write("📡 Streamlit Cloud 서버의 외부 IP 주소는:")
-st.code(ip)
-
-
 st.markdown(
     '<a href="https://1bang.kr/pages/tp" target="_blank">'
-    '<img src="https://1bang.kr/upload/195ca21600a64c248e1f68ee37b0e6ff.webp" />'
+    '<img src="https://1bang.kr/upload/0eb0f1de83f949b1b037a50bdeda1a07.webp" />'
     '</a>',
     unsafe_allow_html=True
 )
