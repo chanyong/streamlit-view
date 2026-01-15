@@ -6,7 +6,7 @@ import altair as alt
 import requests
 
 st.title('▶️ 명동 상품권 시세 차트')
-st.subheader(' ')
+# st.subheader(' ')
 
 st.markdown(
     '<a href="https://1bang.kr/pages/tp" target="_blank">'
@@ -82,6 +82,7 @@ for idx in range(N):
             titleAnchor='middle'))
     )
     st.altair_chart(chart, use_container_width=True)
+
 
 
 
