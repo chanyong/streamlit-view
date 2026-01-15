@@ -5,7 +5,7 @@ import pymysql
 import altair as alt
 import requests
 
-st.title('■ 명동 상품권 시세 차트')
+st.title('▶️ 명동 상품권 시세 차트')
 st.subheader(' ')
 
 st.markdown(
@@ -82,6 +82,7 @@ for idx in range(N):
             titleAnchor='middle'))
     )
     st.altair_chart(chart, use_container_width=True)
+
 
 
 
