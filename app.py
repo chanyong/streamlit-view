@@ -5,7 +5,7 @@ import pymysql
 import altair as alt
 import requests
 
-st.title('상품권 시세 차트')
+st.title('■ 명동 상품권 시세 차트')
 st.subheader(' ')
 
 st.markdown(
@@ -54,12 +54,12 @@ for idx in range(N):
     if select_ticket == 'All':
         db_condition = (sell_buy_nm, )
         sql = " select price_date , ticket_nm, ROUND(ticket_rate*100,2) \
-            from ticket_price_daily where store_nm  = '미래' and sell_buy_nm  = %s and \
+            from ticket_price_daily where store_nm  = '최고' and sell_buy_nm  = %s and \
             ticket_nm in ('롯데10만','신세계10만', '현대10만' ) order by price_date desc "
     else:
         db_condition = (sell_buy_nm, select_ticket)
         sql = " select price_date , ticket_nm, ROUND(ticket_rate*100,2) \
-            from ticket_price_daily where store_nm  = '미래' and sell_buy_nm  = %s and \
+            from ticket_price_daily where store_nm  = '최고' and sell_buy_nm  = %s and \
             ticket_nm in ('롯데10만','신세계10만', '현대10만' ) and ticket_nm = %s order by price_date desc "
 
     print(db_condition)
@@ -82,6 +82,7 @@ for idx in range(N):
             titleAnchor='middle'))
     )
     st.altair_chart(chart, use_container_width=True)
+
 
 
 
